@@ -29,9 +29,9 @@ agent_alias_id = ssm.get_parameter(Name='/bedrock-agent-data/Bedrock-agent-alias
 @app.get("/use_case/questions", response_class=HTMLResponse, tags=['bedrock-agent'])
 async def switch_use_case(request: Request):
     questions = [
-         "What was John Denny's salary in 1986?",
-         "What year was Nolan Ryan inducted into the Hall of Fame?",
-         "Who is the richest player in the history of baseball?"
+         "Total Incidents where L1 product is Xpressfeed?",
+         "Distinct Windows OS in Tech Debt?",
+         "Total servers in Tech Debt in Market Intelligence Division?"
     ]
     return templates.TemplateResponse(
         "recommended_questions.html", 
